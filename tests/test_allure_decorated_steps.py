@@ -17,7 +17,7 @@ def open_github_main_page():
 
 @allure.step('Найти репозиторий {repo} и перейти в него')
 def find_repo(repo):
-    browser.element('//div[@data-action="click:qbsearch-input#searchInputContainerClicked"]').click()
+    browser.element('[data-target="qbsearch-input.inputButtonText"]').click()
     browser.element('#query-builder-test').send_keys(repo).press_enter()
 
 
@@ -28,7 +28,7 @@ def open_issue_list():
 
 @allure.step('Открыть issue с названием {issue}')
 def open_issue_by_name(issue):
-    browser.all('//div[@aria-label="Issues"]//a').element_by(have.exact_text(issue)).click()
+    browser.all('[data-hovercard-type="issue"]').element_by(have.exact_text(issue)).click()
 
 
 @allure.step('Убедиться, что у открытого issue название {issue}')
