@@ -19,7 +19,7 @@ def test_github_search_with_allure_steps():
 
 @allure.step('Открыть github.com')
 def open_github_main_page():
-    browser.open('https://github.com')
+    browser.open('')
 
 
 @allure.step('Найти репозиторий {repo} и перейти в него')

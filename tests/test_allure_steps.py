@@ -4,7 +4,7 @@ from selene import browser, have
 
 def test_github_search_with_allure_steps():
     with allure.step('Открыть github.com'):
-        browser.open("https://github.com")
+        browser.open("")
     with allure.step('Найти репозиторий Antivist94/qaguru_lesson_10_allure'):
         browser.element('[data-target="qbsearch-input.inputButtonText"]').click()
         browser.element('#query-builder-test').send_keys('repo:Antivist94/qaguru_lesson_10_allure').press_enter()
